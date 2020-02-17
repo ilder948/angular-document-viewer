@@ -61,7 +61,7 @@ export class NgxDocViewerComponent implements OnChanges, OnDestroy {
     @Input() googleCheckInterval = 3000;
     @Input() disableContent: 'none' | 'all' |  'popout' | 'popout-hide' = 'none';
     @Input() googleCheckContentLoaded = true;
-    @Input() set viewer(viewer: viewerType) {
+    @Input() viewer(viewer: viewerType) {
         if (viewer !== 'google' && viewer !== 'office' && viewer !== 'mammoth' && viewer !== 'pdf') {
             console.error(`Unsupported viewer: '${viewer}'. Supported viewers: google, office, mammoth and pdf`);
         }
